@@ -1,5 +1,5 @@
 # Default state for all rules
 default: true
 
-# Disable line-length checking
-MD013: false
+MD013: false # Disable line-length checking
+MD034: false # Disable checking for bare URL's as they are commonly used with Jekyll
