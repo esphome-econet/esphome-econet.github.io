@@ -1,0 +1,44 @@
+<style>
+    .invisible {
+      visibility: hidden;
+    }
+    .hidden {
+      display: none;
+    }
+    esp-web-install-button[install-unsupported] {
+      visibility: inherit;
+    }
+    .radios li {
+      list-style: none;
+      line-height: 2em;
+    }
+  </style>
+  
+  <script
+    type="module"
+    src="https://unpkg.com/esp-web-tools@9/dist/web/install-button.js?module"
+  ></script>
+  
+  <p>Select your product</p>
+  <ul class="radios">
+    <li>
+      <label><input type="radio" name="type" value="esp32" /> esp32</label>
+    </li>
+    <li>
+      <label><input type="radio" name="type" value="esp8266" /> esp8266</label>
+    </li>
+  </ul>
+  <p class="button-row" align="center">
+    <esp-web-install-button class="invisible"></esp-web-install-button>
+  </p>
+  
+  <script>
+    document.querySelectorAll('input[name="type"]').forEach(radio =>
+      radio.addEventListener("change", () => {
+        const button = document.querySelector('esp-web-install-button');
+        button.manifest = `https://barndawgie.github.io/esphome-econet/esphome-econet-${radio.value}.json`;
+        button.classList.remove('invisible');
+      }
+    ));
+  </script>
+  
