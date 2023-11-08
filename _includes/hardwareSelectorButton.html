@@ -24,10 +24,16 @@
 <p>Select your product</p>
 <ul class="radios">
   <li>
-    <label><input type="radio" name="type" value="esp32" /> esp32</label>
+    <label><input type="radio" name="type" value="etwh" />Electric Tank Water Heater</label>
   </li>
   <li>
-    <label><input type="radio" name="type" value="esp8266" /> esp8266</label>
+    <label><input type="radio" name="type" value="hpwh" />Heatpump Water Heater</label>
+  </li>
+  <li>
+    <label><input type="radio" name="type" value="hvac" />HVAC System</label>
+  </li>
+  <li>
+    <label><input type="radio" name="type" value="tlwh" />Tankless Water Heater</label>
   </li>
 </ul>
 <p class="button-row" align="center">
@@ -38,7 +44,7 @@
   document.querySelectorAll('input[name="type"]').forEach(radio =>
     radio.addEventListener("change", () => {
       const button = document.querySelector('esp-web-install-button');
-      button.manifest = `https://barndawgie.github.io/esphome-econet/esphome-econet-${radio.value}.json`;
+      button.manifest = `https://esphome-econet.github.io/esphome-econet/econet-${radio.value}.json`;
       button.classList.remove('invisible');
     }
   ));
