@@ -20,7 +20,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: ESPHome econet
+title: ESPHome-econet
 # email: your-email@example.com
 description: >-  # this means to ignore newlines until "baseurl:"
   esphome-econet is a package for controlling a Rheem water
@@ -37,6 +37,10 @@ plugins:
 header_pages:
   - install.markdown
   - about.markdown
+
+minima:
+  social_links:
+    - {platform: github, user_url: "https://github.com/esphome-econet/esphome-econet"}
 
 # Exclude from processing.
 # The following items will not be processed, by default.

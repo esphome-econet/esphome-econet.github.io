@@ -1,0 +1,51 @@
+<head>
+  <style>
+      .invisible {
+        visibility: hidden;
+      }
+      .hidden {
+        display: none;
+      }
+      esp-web-install-button[install-unsupported] {
+        visibility: inherit;
+      }
+      .radios li {
+        list-style: none;
+        line-height: 2em;
+      }
+    </style>
+
+    <script
+      type="module"
+      src="https://unpkg.com/esp-web-tools@9/dist/web/install-button.js?module"
+    ></script>
+</head>
+
+<p>Select your product</p>
+<ul class="radios">
+  <li>
+    <label><input type="radio" name="type" value="etwh" />Electric Tank Water Heater</label>
+  </li>
+  <li>
+    <label><input type="radio" name="type" value="hpwh" />Heatpump Water Heater</label>
+  </li>
+  <li>
+    <label><input type="radio" name="type" value="hvac" />HVAC System</label>
+  </li>
+  <li>
+    <label><input type="radio" name="type" value="tlwh" />Tankless Water Heater</label>
+  </li>
+</ul>
+<p class="button-row" align="center">
+  <esp-web-install-button class="invisible"></esp-web-install-button>
+</p>
+
+<script>
+  document.querySelectorAll('input[name="type"]').forEach(radio =>
+    radio.addEventListener("change", () => {
+      const button = document.querySelector('esp-web-install-button');
+      button.manifest = `https://esphome-econet.github.io/esphome-econet/econet-${radio.value}.json`;
+      button.classList.remove('invisible');
+    }
+  ));
+</script>
