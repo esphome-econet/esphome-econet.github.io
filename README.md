@@ -1,6 +1,6 @@
 # esphome-econet.github.io
 
-This is a simple Github Pages Jekyll webiste, primarily used for installation of ESPHome-econet devices.
+This is a simple Github Pages Jekyll website, primarily used for installation of ESPHome-econet devices.
 
 To run the site locally, clone the repo and then run:
 

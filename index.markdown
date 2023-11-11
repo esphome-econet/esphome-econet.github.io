@@ -7,4 +7,4 @@ title: ESPHome-econet
 ---
 To install ESPHome-econet on your device, [visit our installation page](/install).
 
-if you'd like help with your setup or to discuss potential improvements to ESPHome-econet, come join us on [our Discord](https://discord.gg/gytTnekGSz).
+If you'd like help with your setup or to discuss potential improvements to ESPHome-econet, come join us on [our Discord](https://discord.gg/gytTnekGSz).
