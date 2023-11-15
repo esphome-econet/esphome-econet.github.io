@@ -16,3 +16,7 @@ repos:
       - id: codespell
 
 exclude: 'Gemfile.lock'
+
+# See https://pre-commit.ci/#configuration for configuration details
+ci:
+  autoupdate_schedule: monthly
